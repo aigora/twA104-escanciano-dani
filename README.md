@@ -1,10 +1,10 @@
-# Título del trabajo
+# TRADUCTOR CODIGO MORSE
 
-Descripción breve del proyecto a realizar (2-3 frases).
+El trabajo consiste en traducir mediante arduino una palabra a codigo morse y viceversa.
 
-## Integrantes del equipo
+## Integrante del equipo
 
-Nombres, apellidos, y usuario GitHub de los integrantes del equipo.
+Alberto Escanciano Cabañeros
 
 ## Objetivos del trabajo
 
