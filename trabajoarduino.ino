@@ -1,14 +1,18 @@
-//pin del led que se enciende cunado se emite el sonido de raya
+//pin del led que se enciende cunado se emite la raya
 #define ledRaya 7
-//pin del led que se enciende cunado se emite el sonido de punto
+//pin del led que se enciende cunado se emite el  punto
 #define ledPunto 8
 //pin del led que se enciende cunado hay un espacio entre palabras
 #define ledEspacio 9
 //pin del led que se enciende cunado se termina el mensaje
 #define ledFin 10
+//pin del pulsador cuando se envia una raya
 #define pulRaya 2
+//pin del pulsador cuando se envia un punto
 #define pulPunto 3
+//pint del pulsador cuando se envia un espacio
 #define pulEspacio 4
+//pin del pulsador cuando se acaba el mensaje
 #define pulFin 5
 
 //lista de caracteres
@@ -126,7 +130,6 @@ else if(opc==2){
   
 
 //método que se encarga de dar a saber que ya se termino de transmitir el mensaje
-//esperando medio segundo para continuar
 void finMensaje(){
   digitalWrite(ledFin, HIGH);
   delay(1000);
@@ -135,8 +138,7 @@ void finMensaje(){
 
 }
 
-//método que se encarga de encender un led (raya o punto) y emitir un sonido
-//a través del buzzer dejando un respectivo tiempo de diferencia
+//método que se encarga de encender un led (raya o punto) 
 //función que se usa para emitir un punto
 void punto(){
   //se deja un espacio entre la anterior letra y esta
@@ -214,39 +216,4 @@ void emitirMorse(){
         espacio();
     }
 }
-/*
-void enviarpalabra(){
-palabra = "";
-    if(Serial.available()){
-      //se lee el contenido de Serial
-        palabra = Serial.readString();
-        //se borra la anterior palabra traducida
-        traduccion = "";
-        enviado = false;
-        //se usa para validar el hecho de encontrar un carácter
-        boolean encontre = false;
-        //si se digita la palabra error
-        if(palabra == "error")
-            traduccion = error;
-        else{
-          //se lee la palabra digitada y se convierte a morse
-            for(int i = 0; i < palabra.length(); i++){
-                for(int j = 0; j < sizeof(caracteres) && !encontre; j++){
-                    if(palabra.charAt(i) == caracteres[j]){
-                      encontre = true;
-                      traduccion += codigo[j] + " ";
-                      traduccion += vacio;
-                    }
-                    else if(palabra.charAt(i) == ' '){
-                      encontre = true;
-                      traduccion += vacio;
-                    }
-                     
-                }
-               
-                encontre = false;
-            }
-             Serial.print("La traduccion es:"); 
-        }
-    }
-} */
+
