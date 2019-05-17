@@ -30,14 +30,6 @@ String error = "../../..", traduccion = "", palabra = "",traduccion2="",comp="",
 char vacio = '/';
 String inv[50];
 
-//representa el tiempo de duración del punto
-int estado=LOW;
-int tiempoPunto = 70;
-//representa el tiempo de duración de la raya
-int tiempoRaya = tiempoPunto * 3;
-//representa el tiempo que hay entre letra y letra
-//representa el tiempo que hay entre palabra y palabra
-int silencioLetra = tiempoPunto * 3, silencioPalabra = tiempoPunto * 5;
 //para validar que ya se haya enviado el mensaje a través del puerto serial
 boolean enviado = false;
 int opc=0;
