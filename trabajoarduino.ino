@@ -134,7 +134,7 @@ void finMensaje(){
 //función que se usa para emitir un punto
 void punto(){
   //se deja un espacio entre la anterior letra y esta
-    delay(silencioLetra);
+    delay(630);
     digitalWrite( ledPunto,HIGH);
     delay(500);
     digitalWrite(ledPunto,LOW);
@@ -144,7 +144,7 @@ void punto(){
 //función que se usa para emitir un raya
 void linea(){
     //se deja un espacio entre la anterior letra y esta
-    delay(silencioLetra);
+    delay(630);
     digitalWrite( ledRaya,HIGH);
     delay(1000);
     digitalWrite(ledRaya,LOW);
